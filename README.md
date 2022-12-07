@@ -13,5 +13,11 @@ Refer this document:- https://aws.amazon.com/lightsail/faq/#
 ## What is Node Js?
 Node.js is an open-source server environment. Node.js is cross-platform and runs on Windows, Linux, Unix, and macOS. Node.js is a back-end JavaScript runtime environment. Node.js runs on the V8 JavaScript Engine and executes JavaScript code outside a web browser.
 
-Refer this document:- https://www.w3schools.com/nodejs/nodejs_intro.asp
+Refer this document:- https://nodejs.org/en/about/ 
 
+## Lightsail support? 
+Lightsail offers a range of operating system and application templates that are automatically installed when you create a new Lightsail instance. Application templates include WordPress, Drupal, Joomla!, Ghost, Magento, Redmine, LAMP, Nginx (LEMP), MEAN, Node.js, Django, and more.
+
+
+## Steps to be followed
+### Step 1 
