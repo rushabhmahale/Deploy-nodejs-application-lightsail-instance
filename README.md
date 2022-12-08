@@ -74,5 +74,32 @@ npm install
 
 ### Step 3 Deploy application in lightsail instance 
 
+- Let's run the following commands to install and start our application with pm2.
+```
+sudo npm i -g pm2
+pm2 start index.js
+```
+<img width="1391" alt="image" src="https://user-images.githubusercontent.com/63963025/206401581-65d5f88c-3ed2-4e21-9b93-a57117dcb380.png">
+
+
+- Install Nginx 
+```
+sudo apt-get install nginx 
+```
+- <img width="1384" alt="image" src="https://user-images.githubusercontent.com/63963025/206402408-2a214485-2bda-4884-baf8-6c5c6a1280f9.png">
+
+- Edit conf file of Nginx 
+```
+sudo vi /etc/nginx/sites-enabled/default
+```
+<img width="760" alt="image" src="https://user-images.githubusercontent.com/63963025/206402872-03d627fa-ea2f-4aac-9af4-7a0f300bc530.png">
+
+- Add this content in conf file 
+<img width="730" alt="image" src="https://user-images.githubusercontent.com/63963025/206403646-b9979a9f-014e-49a0-85dd-7e3854e3890b.png">
+
+- Restart nginx service
+```
+sudo systemctl restart nginx 
+```
 
 
