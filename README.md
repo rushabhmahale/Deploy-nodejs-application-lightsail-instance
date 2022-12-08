@@ -42,6 +42,8 @@ Lightsail offers a range of operating system and application templates that are 
 - Machine is ready lets ssh into the machine and deploy our Nodejs application. 
 <img width="1030" alt="image" src="https://user-images.githubusercontent.com/63963025/206385220-70862e62-8679-42e7-932d-be13b1eb9dda.png">
 
+
+### Step 2 install code in lightsail instance
 - Now go to termainal icon you will able to ssh directly into machine. 
 <img width="482" alt="image" src="https://user-images.githubusercontent.com/63963025/206385758-0a8d5a08-e528-4787-ba3f-de1b54f75c97.png">
 
@@ -57,4 +59,20 @@ cd /opt/bitnami/apache2/htdocs
 - Bydefault webpage of Bitnami Node.js.
 <img width="1209" alt="image" src="https://user-images.githubusercontent.com/63963025/206387468-4a232980-a5e7-45cf-ac1b-ccde529ae89c.png">
 
-- 
+- Now download your code from github 
+```
+git clone https://github.com/rushabhmahale/Deploy-nodejs-application-lightsail-instance.git
+```
+<img width="995" alt="image" src="https://user-images.githubusercontent.com/63963025/206399865-2b5c8426-5911-44ec-aec4-432ca2af10b2.png">
+
+
+- install node package
+```
+npm install
+```
+<img width="1081" alt="image" src="https://user-images.githubusercontent.com/63963025/206400289-6d351b53-029d-45f9-9b01-4d69b05c70bb.png">
+
+### Step 3 Deploy application in lightsail instance 
+
+
+
