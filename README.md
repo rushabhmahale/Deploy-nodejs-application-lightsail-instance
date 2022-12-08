@@ -128,3 +128,9 @@ Include "/opt/bitnami/conf/httpd-prefix.conf"
 ```
 sudo /opt/bitnami/ctlscript.sh restart apache
 ```
+- Now go to Lightsail Home --> Instance --> Manage
+<img width="506" alt="image" src="https://user-images.githubusercontent.com/63963025/206473716-276a908a-5007-4a59-92c8-71fa2e830663.png">
+
+- Now go to Networking section edit firewall (Security Group). In the Ipv4 section 
+<img width="995" alt="image" src="https://user-images.githubusercontent.com/63963025/206474407-4e386887-c0f4-4bbc-9c48-b50809cefcbe.png">
+
