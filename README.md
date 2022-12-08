@@ -81,25 +81,50 @@ pm2 start index.js
 ```
 <img width="1391" alt="image" src="https://user-images.githubusercontent.com/63963025/206401581-65d5f88c-3ed2-4e21-9b93-a57117dcb380.png">
 
-
-- Install Nginx 
+- create a conf folder 
 ```
-sudo apt-get install nginx 
+sudo mkdirsudo mkdir /opt/bitnami/conf
 ```
-- <img width="1384" alt="image" src="https://user-images.githubusercontent.com/63963025/206402408-2a214485-2bda-4884-baf8-6c5c6a1280f9.png">
-
-- Edit conf file of Nginx 
+- Go inside that directory you have created 
 ```
-sudo vi /etc/nginx/sites-enabled/default
+cd /opt/bitnami/conf
 ```
-<img width="760" alt="image" src="https://user-images.githubusercontent.com/63963025/206402872-03d627fa-ea2f-4aac-9af4-7a0f300bc530.png">
+<img width="610" alt="image" src="https://user-images.githubusercontent.com/63963025/206466992-e8a11742-cfdd-4d5b-9fb1-af2479d5bda5.png">
 
-- Add this content in conf file 
-<img width="730" alt="image" src="https://user-images.githubusercontent.com/63963025/206403646-b9979a9f-014e-49a0-85dd-7e3854e3890b.png">
-
-- Restart nginx service
+- Create a new file httpd-prefix.conf (exit with wq!).
 ```
-sudo systemctl restart nginx 
+sudo vi /opt/bitnami/conf/httpd-prefix.conf
+```
+<img width="473" alt="image" src="https://user-images.githubusercontent.com/63963025/206467273-c525190f-e9a5-46dc-9dbb-b2bda382a7c9.png">
+
+- Now go to config file httpd-app.conf(exit with wq!).
+```
+sudo vi /opt/bitnami/conf/httpd-app.conf
+```
+- Add this content inside the file
+```
+Add ProxyPass / http://127.0.0.1:3000/
+
+ProxyPassReverse / http://127.0.0.1:3000/
 ```
 
+<img width="462" alt="image" src="https://user-images.githubusercontent.com/63963025/206470606-c9de7574-5919-43a7-a436-ff4abfba5c7a.png">
 
+- Now go to Apache file location
+```
+cd /opt/bitnami/apache2/conf/bitnami
+```
+- Open the file 
+```
+sudo vi bitnami.conf
+```
+- Include inside in the file 
+```
+Include "/opt/bitnami/conf/httpd-prefix.conf"
+```
+<img width="661" alt="image" src="https://user-images.githubusercontent.com/63963025/206471585-b4a981e6-9a1f-4abb-875e-da63b8c1c229.png">
+
+- Restart apache service using the below commands
+```
+sudo /opt/bitnami/ctlscript.sh restart apache
+```
