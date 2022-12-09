@@ -124,13 +124,30 @@ Include "/opt/bitnami/conf/httpd-prefix.conf"
 ```
 <img width="661" alt="image" src="https://user-images.githubusercontent.com/63963025/206471585-b4a981e6-9a1f-4abb-875e-da63b8c1c229.png">
 
-- Restart apache service using the below commands
+- Restart apache service using the below commands.
 ```
 sudo /opt/bitnami/ctlscript.sh restart apache
 ```
-- Now go to Lightsail Home --> Instance --> Manage
+- Now start node js application where your index.js is located. 
+```
+npm start
+```
+<img width="980" alt="image" src="https://user-images.githubusercontent.com/63963025/206631745-ea355f74-a620-44fe-9b3f-c7744a4982f7.png">
+
+- Now go to Lightsail Home --> Instance --> Manage.
 <img width="506" alt="image" src="https://user-images.githubusercontent.com/63963025/206473716-276a908a-5007-4a59-92c8-71fa2e830663.png">
 
-- Now go to Networking section edit firewall (Security Group). In the Ipv4 section 
+- Now go to Networking section edit firewall (Security Group). In the Ipv4 section. 
 <img width="995" alt="image" src="https://user-images.githubusercontent.com/63963025/206474407-4e386887-c0f4-4bbc-9c48-b50809cefcbe.png">
+
+- Add rule --> Custom TCP 3000 Your node js application is running on port number 3000.
+<img width="826" alt="image" src="https://user-images.githubusercontent.com/63963025/206631924-4afe00a5-0eba-4bec-aef8-08f8774f813c.png">
+
+<img width="795" alt="image" src="https://user-images.githubusercontent.com/63963025/206632094-43c4b783-0a8d-4de7-81f6-5b94c396e857.png">
+
+- Copy your ip address and open in the browser. 
+<img width="813" alt="image" src="https://user-images.githubusercontent.com/63963025/206632443-0c5abe88-21d0-4c88-b5eb-f176118b89fb.png">
+
+- Here we go our application is exposed on port 3000. 
+<img width="409" alt="image" src="https://user-images.githubusercontent.com/63963025/206632398-2dea4b1f-41e9-47af-a596-ed684f1ad4af.png">
 
