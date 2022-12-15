@@ -1,5 +1,9 @@
 # Deploy-nodejs-application-lightsail-instance
 
+
+https://user-images.githubusercontent.com/63963025/207778386-cffd99d6-f4ff-4f29-a0f3-8675a4ac98a2.mp4
+
+
 ## What is Amazon Lightsail? 
 Amazon Lightsail is a virtual private server (VPS) provider and is the easiest way to get started with AWS for developers, small businesses, students, and other users who need a solution to build and host their applications on cloud. Lightsail provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites and web applications in the cloud. Lightsail includes everything you need to launch your project quickly – virtual machines, containers, databases, CDN, load balancers, DNS management etc. 
 
